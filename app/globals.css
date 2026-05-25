@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "@neondatabase/auth/ui/tailwind";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --navy: #050517;
+  --rust: #a74727;
+  --beige: #EFC88B;
+  --cream: #F4E3B2;
+  --lightgray: #D3D5D7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-color: var(--cream);
+  color: Black;
+  font-family: Roboto, Open Sans, sans-serif;
+}
+
+h2 {
+  color: white;
+  background-color: var(--rust);
+  font-family: Roboto;
+}
+p {
+  font-family: 'Open Sans';
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
